@@ -327,10 +327,10 @@ nav ul li a:hover {
   grid-template-areas:
     "x1 x2 x3"
     "x4 x5 x6";
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: repeat(3,1fr);
   width: 90%;
   margin: auto;
-  gap: 30px;
+  gap: 25px;
 }
 .galleries .imgs {
   width: 100%;
