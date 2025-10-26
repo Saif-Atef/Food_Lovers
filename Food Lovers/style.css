@@ -49,12 +49,6 @@ nav ul {
 nav ul li a {
   font-size: 20px;
 }
-nav ul li {
-  transition: all 0.3s ease-out;
-}
-nav ul li:hover {
-  transform: translatey(5px);
-}
 nav ul li a:hover {
   transform: translateY(5px);
   padding-bottom: 5px;
