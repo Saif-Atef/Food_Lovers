@@ -20,9 +20,7 @@ ul {
 }
 header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(images/home_bg.jpg);
-  background-position: center;
-  background-size: cover;
+    url(images/home_bg.jpg) center center/cover;
   height: 100vh;
 }
 nav {
@@ -33,7 +31,7 @@ nav {
   padding: 1% 7%;
 }
 nav img {
-  width: 100px;
+  width: 150px;
   transition: all 0.3s ease-out;
 }
 nav img:hover {
@@ -41,7 +39,7 @@ nav img:hover {
 }
 nav ul {
   text-transform: capitalize;
-  width: 40%;
+  width: 60%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -62,6 +60,7 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   line-height: 2;
+  text-align: center;
 }
 .info h1 {
   text-transform: capitalize;
@@ -86,11 +85,11 @@ nav ul li a:hover {
   color: black;
   border: 2px transparent solid;
 }
-.sec1 {
-  padding: 50px 0;
+.about {
+  padding: 10% 0;
   background-color: rgba(230, 230, 250, 0.411);
 }
-.head {
+.about-head {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,66 +97,60 @@ nav ul li a:hover {
   line-height: 2;
   margin-bottom: 30px;
 }
-.head h2 {
+.about-head h2 {
   text-transform: capitalize;
   font-size: 45px;
   text-align: center;
 }
-.head p {
+.about-head p {
   color: #888686;
 }
 .history {
   width: 90%;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  gap: 50px;
 }
 .left p {
-  width: 90%;
   color: #888686;
-  margin-bottom: 40px;
   font-size: 18px;
   line-height: 1.5;
+  margin-bottom: 40px;
 }
 .left a {
   text-transform: uppercase;
   background-color: #525151;
   border-radius: 20px;
   padding: 20px 30px;
-  margin-bottom: 10%;
 }
 .left a:hover {
   color: black;
   border: gold 1px solid;
   background-color: gold;
 }
-.sec2 {
-  overflow: auto;
-  background: url(images/offer-background.jpg);
-  background-position: center;
-  background-size: 1500px;
-  padding-top: 40px;
+.offers {
+  background: url(images/offer-background.jpg) center center/cover;
+  padding: 10% 0;
 }
-.head2 {
+.offers-head {
   text-align: center;
   line-height: 2;
+  margin-bottom: 50px;
 }
-.head2 h3 {
+.offers-head h3 {
   font-size: 40px;
   text-transform: capitalize;
   color: gold;
 }
-.head2 p {
+.offers-head p {
   color: #fff;
   font-weight: 500;
 }
-.offers {
-  width: 93%;
+.dishes {
+  width: 90%;
   margin: auto;
-  margin-top: 50px;
   display: grid;
   grid-template-areas: "dish1 dish2 dish3";
-  margin-bottom: 8%;
 }
 .dish1 {
   grid-area: dish1;
@@ -194,28 +187,30 @@ nav ul li a:hover {
 .dish del {
   color: gray;
 }
+.dish img {
+  width: 200px;
+}
 .menu {
-  padding: 50px 0;
+  padding: 5% 0;
   background-color: beige;
 }
-.head3 {
+.menu-head {
   line-height: 2;
   margin-bottom: 50px;
   text-align: center;
 }
-.head3 h4 {
+.menu-head h4 {
   font-size: 45px;
   text-transform: capitalize;
 }
-.head3 p {
+.menu-head p {
   font-size: 20px;
   color: #888686;
 }
 .mini-menu {
   width: 90%;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 40px;
   margin-bottom: 50px;
 }
@@ -286,11 +281,12 @@ nav ul li a:hover {
 }
 .time {
   align-items: center;
-  padding: 5% 5%;
-  background: url(images/daytime_bg.jpeg) center/cover;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  padding: 5% 0;
+  background: url(images/daytime_bg.jpeg) center center/cover;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
 }
 .time div {
   color: white;
@@ -327,7 +323,7 @@ nav ul li a:hover {
   grid-template-areas:
     "x1 x2 x3"
     "x4 x5 x6";
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   width: 90%;
   margin: auto;
   gap: 25px;
@@ -473,77 +469,112 @@ footer span {
   font-weight: bolder;
   font-size: 22px;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   nav {
     flex-direction: column;
+    gap: 30px;
+    padding: 1% 2%;
   }
   nav ul {
     width: 100%;
   }
   nav ul li a {
-    font-size: 15px;
-  }
-  .info {
-    text-align: center;
+    font-size: 17px;
   }
   .info h1 {
     font-size: 25px;
     font-weight: 500;
   }
-  .head h2 {
+  .about-head h2 {
     font-weight: 500;
   }
-  .history img {
-    display: none;
-  }
-  .history {
-    display: flex;
-  }
-  .offers {
+  .dishes {
     display: flex;
     flex-direction: column;
     gap: 30px;
   }
-  .head2 h3 {
+  .offers-head h3 {
     font-size: 30px;
   }
-  .dish img {
-    width: 140px;
-  }
-  .head3 h4 {
+  .menu-head h4 {
     font-size: 30px;
   }
   .mini-menu {
     display: flex;
     flex-direction: column;
   }
-  .menu a{
+  .menu a {
     width: 70%;
   }
-  .time{
+  .time {
     display: flex;
     flex-direction: column;
   }
-  .galleries{
+  .galleries {
     display: flex;
     flex-direction: column;
   }
-  .galleries .imgs{
+  .galleries .imgs {
+    width: 70%;
     margin: auto;
-    width: 70%;
     height: 30vh;
   }
-  .mini-footer{
+  .mini-footer {
     display: flex;
     flex-direction: column;
   }
-  .contact a{
+  .contact a {
     width: 60%;
   }
-  footer p{
+  footer p {
     font-size: 13px;
   }
-  footer span{
+  footer span {
     font-size: 15px;
+  }
+}
+@media (min-width: 500px) and (max-width: 800px) {
+  nav ul li a {
+    font-size: 22px;
+  }
+  .info h1 {
+    font-size: 30px;
+  }
+  .info p {
+    font-size: 22px;
+  }
+  .dishes{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .dish{
+    width: 45%;
+  }
+  .dish3{
+    margin: auto;
+  }
+  .time {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .time div{
+    width: 45%;
+  }
+  .galleries{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .galleries .imgs{
+    width: 45%;
+    margin: auto;
+    height: 40vh;
+  }
+}
+@media (max-width:1070px){
+  .about img{
+    display: none;
+  }
+  .left{
+    text-align: center;
   }
 }
