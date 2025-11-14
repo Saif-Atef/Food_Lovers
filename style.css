@@ -335,6 +335,7 @@ nav ul li a:hover {
 .galleries {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   width: 80%;
   margin: auto;
