@@ -35,7 +35,7 @@ nav img {
   transition: all 0.3s ease-out;
 }
 nav img:hover {
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 nav ul {
   text-transform: capitalize;
@@ -85,8 +85,16 @@ nav ul li a:hover {
   color: black;
   border: 2px transparent solid;
 }
+.history img {
+  transition: all 0.4s ease;
+  filter: drop-shadow(3px 3px 5px #000);
+}
+.history img:hover {
+  transform: translateY(-10px);
+  filter: drop-shadow(5px 5px 10px #000);
+}
 .about {
-  padding: 10% 0;
+  padding: 50px 0;
   background-color: rgba(230, 230, 250, 0.411);
 }
 .about-head {
@@ -130,7 +138,7 @@ nav ul li a:hover {
 }
 .offers {
   background: url(images/offer-background.jpg) center center/cover;
-  padding: 10% 0;
+  padding: 50px 0;
 }
 .offers-head {
   text-align: center;
@@ -170,9 +178,10 @@ nav ul li a:hover {
   line-height: 2;
   color: white;
   transition: all 0.3s ease-out;
+  filter: drop-shadow(5px 5px 10px #000);
 }
 .dish:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 .dish h3 {
   font-size: 22px;
@@ -215,12 +224,17 @@ nav ul li a:hover {
   gap: 40px;
   margin-bottom: 50px;
 }
+.left-menu,
+.right-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 .food {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .food:hover {
   transform: translateY(-5px);
@@ -240,7 +254,7 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: hsla(51, 100%, 50%, 0.3);
+  background: #ffd9004f;
   opacity: 0;
   transition: all 0.5s ease-out;
 }
@@ -295,11 +309,10 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height: 1.5;
   transition: all 0.2s ease-in-out;
 }
 .time div:hover {
-  transform: translateY(-5px);
+  transform: scale(1.1);
 }
 .time div img {
   margin-bottom: 20px;
@@ -320,56 +333,23 @@ nav ul li a:hover {
   margin-bottom: 30px;
 }
 .galleries {
-  display: grid;
-  grid-template-areas:
-    "x1 x2 x3"
-    "x4 x5 x6";
-  grid-template-columns: repeat(3, 1fr);
-  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 80%;
   margin: auto;
-  gap: 25px;
+  gap: 20px;
 }
-.galleries .imgs {
-  width: 100%;
+.galleries img {
+  border-radius: 20px;
+  width: 30%;
   height: 40vh;
-  position: relative;
-}
-.imgs img {
-  border-radius: 20px;
-  width: 100%;
-  height: 100%;
-}
-.image1 {
-  grid-area: x1;
-}
-.image2 {
-  grid-area: x2;
-}
-.image3 {
-  grid-area: x3;
-}
-.image4 {
-  grid-area: x4;
-}
-.image5 {
-  grid-area: x5;
-}
-.image6 {
-  grid-area: x6;
-}
-.overlay2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  border-radius: 20px;
+  filter: brightness(50%);
   transition: all 0.3s ease-in-out;
 }
-.overlay2:hover {
-  opacity: 1;
+.galleries img:hover {
+  filter: brightness(100%);
+  transform: scale(1.02);
 }
 .mini-footer {
   background-color: rgba(230, 230, 250, 0.411);
@@ -400,16 +380,23 @@ nav ul li a:hover {
 .address i {
   color: gold;
 }
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .social a {
-  margin-right: 2px;
+  display: inline-block;
   font-size: 20px;
   padding: 7px;
   background-color: #1e272e;
   border-radius: 50%;
+  transition: all 0.2s ease-in-out;
 }
 .social a:hover {
   background-color: gold;
   color: black;
+  transform: translateY(-3px);
 }
 .contact {
   width: 80%;
@@ -422,7 +409,7 @@ textarea {
   padding: 10px;
   background-color: rgba(128, 128, 128, 0.3);
   border: 1px transparent solid;
-  width: 100%;
+  width: 80%;
   height: 8vh;
   margin-bottom: 20px;
   transition: all 0.5s ease-in-out;
@@ -430,15 +417,12 @@ textarea {
 textarea {
   height: 20vh;
 }
-.contact input:focus {
-  outline: 0;
-  background-color: gold;
-  color: black;
-}
+.contact input:focus,
 .contact textarea:focus {
   outline: 0;
   background-color: gold;
   color: black;
+  width: 90%;
 }
 .contact a {
   text-transform: uppercase;
@@ -515,10 +499,10 @@ footer span {
     display: flex;
     flex-direction: column;
   }
-  .galleries .imgs {
-    width: 70%;
+  .galleries img {
+    width: 80%;
     margin: auto;
-    height: 30vh;
+    height: 40vh;
   }
   .mini-footer {
     display: flex;
@@ -544,38 +528,38 @@ footer span {
   .info p {
     font-size: 22px;
   }
-  .dishes{
+  .dishes {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .dish{
+  .dish {
     width: 45%;
   }
-  .dish3{
+  .dish3 {
     margin: auto;
   }
   .time {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .time div{
+  .time div {
     width: 45%;
   }
-  .galleries{
+  .galleries {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .galleries .imgs{
+  .galleries img {
     width: 45%;
     margin: auto;
     height: 40vh;
   }
 }
-@media (max-width:1070px){
-  .about img{
+@media (max-width: 1070px) {
+  .about img {
     display: none;
   }
-  .left{
+  .left {
     text-align: center;
   }
 }
